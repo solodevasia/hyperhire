@@ -1,0 +1,49 @@
+{
+  "name": "sdvrc-react",
+  "description": "Solo Development Revolutionary Company",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "tailwind-init": "npx tailwindcss init"
+  },
+  "engines": {
+    "node": "v20.18.0",
+    "npm": "v10.8.2"
+  },
+  "author": {
+    "name": "Kenedy Nopriansyah",
+    "email": "kenedinovriansyah@gmail.com",
+    "url": "https://www.linkedin.com/in/kenedy-nopriansyah-b5864a200/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solodevasia/hyperhire.git",
+    "directory": "src"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "postcss": "^8.4.47",
+    "postcss-loader": "^8.1.1",
+    "sass": "^1.80.4",
+    "sass-loader": "^16.0.2",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^3.4.14",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0",
+    "webpack-merge": "^6.0.1"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
