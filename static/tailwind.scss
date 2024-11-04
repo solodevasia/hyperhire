@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tree {
+  display: flex;
+  justify-content: center;
+}
+
+.tree ul {
+  list-style-type: none;
+  padding-left: 20px;
+  position: relative;
+}
+
+.tree ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  bottom: 50%;
+  width: 1px;
+  background: #ccc;
+}
+
+.tree li {
+  margin: 20px 0;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.tree li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 20px;
+  background: #ccc;
+}
+
+.tree span {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.tree span:hover {
+  background-color: #e0e0e0;
+}
+
+.dropdown-open,
+.dropdown-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 100s;
+}
+
+.dropdown-open {
+  animation: dropdown-open 400ms forwards;
+}
+
+.dropdown-close {
+  animation: dropdown-close 400ms forwards;
+}
+
+.menu-open,.menu-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 100ms;
+  border-radius: 0 !important;
+}
+
+.menu-open {
+  animation: menu-open 1s forwards;
+}
+
+.menu-close {
+  animation: menu-close 1s forwards;
+}
+
+@keyframes dropdown-open {
+  from {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    display: none;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    top: 100%;
+    left: 0;
+    display: block;
+    visibility: visible;
+  }
+}
+
+@keyframes dropdown-close {
+  from {
+    opacity: 1;
+    top: 100%;
+    left: 0;
+    display: block;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@keyframes menu-open {
+  from {
+    opacity: 0;
+    top: 0;
+    height: 100%;
+    left: -1500px;
+    display: none;
+    visibility: hidden;
+  } to {
+    opacity: 1;
+    top: 0;
+    height: 100%;
+    left: 0;
+    display: block;
+    visibility: visible;
+  }
+}
+
+@keyframes menu-close {
+  from {
+    opacity: 1;
+    top: 0;
+    height: 100%;
+    left: 0;
+    display: block;
+    visibility: visible;
+  } to {
+    opacity: 0;
+    top: 0;
+    height: 100%;
+    left: -1500px;
+    display: none;
+    visibility: hidden;
+  }
+}
